@@ -31,16 +31,16 @@ app.use(helmet());
 app.use(cors({ credentials: true, origin: origineClient })); //L'origine des requêtes
 app.use(bodyParser.json()); //Transformer nos corps en json
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname, "./client/build")));
+// app.use(express.static(path.join(__dirname, "./build")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "./build", "index.html"));
 });
 app.get("/attestation-transcash", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "./build", "index.html"));
 });
 app.get("/attestation-pcs", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "./build", "index.html"));
 });
 
 app.use("/api/user", userRoute);
