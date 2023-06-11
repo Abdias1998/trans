@@ -19,7 +19,7 @@ module.exports.createReceive = async_handler(async (req, res) => {
 
   if (!validator.isLength(firstName, { min: 2 }))
     return res.status(401).json({
-      message: `Le texte du nom n'est pas valide`,
+      message: `Le texte du nom complet n'est pas valide`,
     });
   if (!validator.isLength(firstName, { max: 15 }))
     return res.status(401).json({
